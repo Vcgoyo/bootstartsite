@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="layout"
+>
 <head>
 <meta charset="UTF-8"/>
 <title>Insert title here</title>
 </head>
 <body>
+
+  <div th:fragment="body" th:remove="tag">
 	<h1 th:inline="text">Hello.v.2</h1>  
+		
        <p th:text="${hello}"></p>
+  </div>
 </body>
 </html>
