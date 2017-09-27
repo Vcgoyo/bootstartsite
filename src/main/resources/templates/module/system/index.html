@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="layouts/default"
+<div th:fragment="title" th:remove="tag">welcome to bootstartsite</div>
+<div th:fragment="head" th:remove="tag">
+	<title>${fns:getConfig('productName')}</title>
+	<div th:with="tabmode=${empty cookie.tabmode.value ? '0' : cookie.tabmode.value}"/>
+	<c:if test="${tabmode eq '1'}"><link th:if="${tabmode=='1'}" rel="Stylesheet" href="${ctxStatic}/jerichotab/css/jquery.jerichotab.css" />
+    <script type="text/javascript" src="${ctxStatic}/jerichotab/js/jquery.jerichotab.js"></script></c:if>
+</div>
+<div th:fragment="body" th:remove="tag">
+
+</div>
+</html>

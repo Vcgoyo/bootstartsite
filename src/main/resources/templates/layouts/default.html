@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html style="overflow-x:auto;overflow-y:auto;" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<head>
-<meta charset="UTF-8">
-    <title><div th:include="this::title"></div> - Powered By BootStartSite</title>
-    <include head>
-    <div th:include="this::head"></div> 
+<head >
+    <title><div th:replace="this::title"></div>Powered By BootStartSite</title>
+    <div th:replace="include/head::headResource"></div> 
+    <div th:replace="this::head"></div> 
 </head>
 <body>
-	<div th:include="this::body"></div>
-	
-
+	<div th:replace="this::body"></div>
 </body>
 </html>
